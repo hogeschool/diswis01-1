@@ -49,9 +49,22 @@
   <ItemGroup>
     <Compile Include="MathematicsWeek1.fs" />
     <Compile Include="MathematicsWeek2.fs" />
+    <Compile Include="MathematicsWeek3.fs" />
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
+    <None Include="Chick1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="graph1.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="graph2.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="graph3.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LatexSlideGenerator\Slides\LatexSlidesGenerator.fsproj">
