@@ -2,11 +2,10 @@
 module MathematicsWeek2
 
 open CommonLatex
-open SlideDefinition
+open LatexDefinition
 open CodeDefinitionLambda
 open Interpreter
 
-let LambdaStateTrace(x,y,z) = LambdaStateTrace(x,y,z,true,true,true,true,true)
 
 let slides =
   [
