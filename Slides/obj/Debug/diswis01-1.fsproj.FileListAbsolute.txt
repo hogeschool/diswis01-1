@@ -1,0 +1,14 @@
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\beamerthemeHRTheme.sty
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\logoHRBig.png
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\thunks.png
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\Dev3.exe.config
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\Dev3.XML
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\Dev3.exe
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\Dev3.pdb
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\FSharp.Core.dll
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\SlidesGenerator.dll
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\SlidesGenerator.pdb
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\SlidesGenerator.xml
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\bin\Debug\FSharp.Core.xml
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\obj\Debug\Dev3.exe
+C:\Users\Mudy\Documents\GitHub\diswis01-1\Slides\obj\Debug\Dev3.pdb

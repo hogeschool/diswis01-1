@@ -1,0 +1,8 @@
+\frametitle{\CurrentSection }
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$n$\rightarrow$(*@\colorbox{orange}{(($\lambda$z$\rightarrow$z) ($\lambda$t f$\rightarrow$t))}@*))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$n(*@\colorbox{yellow}{t}@*)(*@\colorbox{yellow}{f}@*)$\rightarrow$(*@\colorbox{yellow}{t}@*))
+\end{lstlisting}
+
