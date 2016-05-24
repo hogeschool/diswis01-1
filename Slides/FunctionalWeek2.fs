@@ -8,6 +8,8 @@ open Interpreter
 let LambdaStateTrace(x,y,z) = LambdaStateTrace(x,y,z,true,true,true,true,true,true)
 let LambdaCodeBlock(x,y) = LambdaCodeBlock(x,y,false)
 
+
+
 let slides =
   [
     Section("Introduction")
@@ -181,6 +183,9 @@ let slides =
 
     TextBlock(@"Let us try it out to \texttt{2} $\times$ \texttt{2} $\rightarrow_\beta$ \texttt{4}")
     LambdaStateTrace(TextSize.Small, ((Mult >> !!"2") >> !!"2"), None)
+
+    TextBlock(@"Let us try it out to \texttt{2} $\times$ \texttt{2} $\rightarrow_\beta$ \texttt{4}")
+    LambdaStateTrace(TextSize.Small, ((Pow >> !!"3") >> !!"2"), None)
 
     SubSection(@"Zero checking")
     ItemsBlock[

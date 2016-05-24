@@ -1342,6 +1342,294 @@ Let us try it out to \texttt{2} $\times$ \texttt{2} $\rightarrow_\beta$ \texttt{
 
 \end{frame}
 
+\begin{frame}[fragile]{\CurrentSection}
+\begin{block}{\CurrentSubSection}
+Let us try it out to \texttt{2} $\times$ \texttt{2} $\rightarrow_\beta$ \texttt{4}
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($3^{2}$)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(((*@\colorbox{orange}{$\wedge$}@*) 3) 2)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+(((*@\colorbox{orange}{$\wedge$}@*) 3) 2)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(((*@\colorbox{yellow}{($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z)))}@*) 3) 2)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+((($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) 3) 2)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+((($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) (*@\colorbox{orange}{3}@*)) 2)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+((($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) (*@\colorbox{orange}{3}@*)) 2)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+((($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) (*@\colorbox{yellow}{($\lambda$s z$\rightarrow$(s (s (s z))))}@*)) 2)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+((($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) ($\lambda$s z$\rightarrow$(s (s (s z))))) 2)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+((*@\colorbox{orange}{(($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) ($\lambda$s z$\rightarrow$(s (s (s z)))))}@*) 2)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+((*@\colorbox{orange}{(($\lambda$m n$\rightarrow$ ($\lambda$s z$\rightarrow$(((n m) s) z))) ($\lambda$s z$\rightarrow$(s (s (s z)))))}@*) 2)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(($\lambda$n s z$\rightarrow$(((n (*@\colorbox{yellow}{($\lambda$s z$\rightarrow$(s (s (s z))))}@*)) s) z)) 2)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) 2)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) (*@\colorbox{orange}{2}@*))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) (*@\colorbox{orange}{2}@*))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) (*@\colorbox{yellow}{($\lambda$s z$\rightarrow$(s (s z)))}@*))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) ($\lambda$s z$\rightarrow$(s (s z))))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(*@\colorbox{orange}{(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) ($\lambda$s z$\rightarrow$(s (s z))))}@*)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+(*@\colorbox{orange}{(($\lambda$n s z$\rightarrow$(((n ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z)) ($\lambda$s z$\rightarrow$(s (s z))))}@*)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((((*@\colorbox{yellow}{($\lambda$s z$\rightarrow$(s (s z)))}@*) ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(((($\lambda$s z$\rightarrow$(s (s z))) ($\lambda$s z$\rightarrow$(s (s (s z))))) s) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(((*@\colorbox{orange}{(($\lambda$s z$\rightarrow$(s (s z))) ($\lambda$s z$\rightarrow$(s (s (s z)))))}@*) s) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(((*@\colorbox{orange}{(($\lambda$s z$\rightarrow$(s (s z))) ($\lambda$s z$\rightarrow$(s (s (s z)))))}@*) s) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$z$\rightarrow$((*@\colorbox{yellow}{($\lambda$s z$\rightarrow$(s (s (s z))))}@*) ((*@\colorbox{yellow}{($\lambda$s z$\rightarrow$(s (s (s z))))}@*) z))) s) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$z$\rightarrow$(($\lambda$s z$\rightarrow$(s (s (s z)))) (($\lambda$s z$\rightarrow$(s (s (s z)))) z))) s) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((*@\colorbox{orange}{(($\lambda$z$\rightarrow$(($\lambda$s z$\rightarrow$(s (s (s z)))) (($\lambda$s z$\rightarrow$(s (s (s z)))) z))) s)}@*) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((*@\colorbox{orange}{(($\lambda$z$\rightarrow$(($\lambda$s z$\rightarrow$(s (s (s z)))) (($\lambda$s z$\rightarrow$(s (s (s z)))) z))) s)}@*) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$s z$\rightarrow$(s (s (s z)))) (($\lambda$s z$\rightarrow$(s (s (s z)))) (*@\colorbox{yellow}{s}@*))) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$s z$\rightarrow$(s (s (s z)))) (($\lambda$s z$\rightarrow$(s (s (s z)))) s)) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$s z$\rightarrow$(s (s (s z)))) (*@\colorbox{orange}{(($\lambda$s z$\rightarrow$(s (s (s z)))) s)}@*)) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$s z$\rightarrow$(s (s (s z)))) (*@\colorbox{orange}{(($\lambda$s z$\rightarrow$(s (s (s z)))) s)}@*)) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$s z$\rightarrow$(s (s (s z)))) ($\lambda$z$\rightarrow$((*@\colorbox{yellow}{s}@*) ((*@\colorbox{yellow}{s}@*) ((*@\colorbox{yellow}{s}@*) z))))) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((($\lambda$s z$\rightarrow$(s (s (s z)))) ($\lambda$z$\rightarrow$(s (s (s z))))) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((*@\colorbox{orange}{(($\lambda$s z$\rightarrow$(s (s (s z)))) ($\lambda$z$\rightarrow$(s (s (s z)))))}@*) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$((*@\colorbox{orange}{(($\lambda$s z$\rightarrow$(s (s (s z)))) ($\lambda$z$\rightarrow$(s (s (s z)))))}@*) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$((*@\colorbox{yellow}{($\lambda$z$\rightarrow$(s (s (s z))))}@*) ((*@\colorbox{yellow}{($\lambda$z$\rightarrow$(s (s (s z))))}@*) ((*@\colorbox{yellow}{($\lambda$z$\rightarrow$(s (s (s z))))}@*) z)))) z))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) z)))) z))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(*@\colorbox{orange}{(($\lambda$z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) z)))) z)}@*))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(*@\colorbox{orange}{(($\lambda$z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) z)))) z)}@*))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (*@\colorbox{yellow}{z}@*)))))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) z))))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (*@\colorbox{orange}{(($\lambda$z$\rightarrow$(s (s (s z)))) z)}@*))))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (*@\colorbox{orange}{(($\lambda$z$\rightarrow$(s (s (s z)))) z)}@*))))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s (*@\colorbox{yellow}{z}@*)))))))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s z))))))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (*@\colorbox{orange}{(($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s z))))}@*)))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (*@\colorbox{orange}{(($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s z))))}@*)))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s (*@\colorbox{yellow}{(s (s (s z)))}@*))))))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s (s (s (s z))))))))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(*@\colorbox{orange}{(($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s (s (s (s z)))))))}@*))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(*@\colorbox{orange}{(($\lambda$z$\rightarrow$(s (s (s z)))) (s (s (s (s (s (s z)))))))}@*))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(s (s (s (*@\colorbox{yellow}{(s (s (s (s (s (s z))))))}@*)))))
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+($\lambda$s z$\rightarrow$(s (s (s (s (s (s (s (s (s z))))))))))
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(*@\colorbox{orange}{($\lambda$s z$\rightarrow$(s (s (s (s (s (s (s (s (s z))))))))))}@*)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{\CurrentSection}
+\lstset{basicstyle=\ttfamily\small}\lstset{numbers=none}\lstset{language=ML}\begin{lstlisting}
+(*@\colorbox{orange}{($\lambda$s z$\rightarrow$(s (s (s (s (s (s (s (s (s z))))))))))}@*)
+\end{lstlisting}
+\pause\lstset{language=ML}\begin{lstlisting}
+(*@\colorbox{yellow}{9}@*)
+\end{lstlisting}
+
+\end{frame}
+
 \SlideSubSection{Zero checking}
 \begin{frame}[fragile]{\CurrentSection}
 \begin{block}{\CurrentSubSection}
