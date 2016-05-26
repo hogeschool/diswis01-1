@@ -1,7 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Course introduction}{4}{0}{2}
-\beamer@sectionintoc {3}{Examination}{7}{0}{3}
-\beamer@sectionintoc {4}{Semantics of traditional programming languages}{9}{0}{4}
-\beamer@sectionintoc {5}{Basic lambda calculus}{18}{0}{5}
-\beamer@sectionintoc {6}{Closing up}{44}{0}{6}
